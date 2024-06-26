@@ -45,7 +45,8 @@ sql
 SELECT State, City, SUM(Sales) AS Total_Sales
 FROM orders
 GROUP BY State, City
-ORDER BY Total_Sales DESC;
+ORDER BY Total_Sales DESC; 
+
 2. Top 10 Most Profitable Products
 Query to find the top 10 products based on profit:
 
@@ -56,6 +57,7 @@ FROM orders
 GROUP BY Product_Name
 ORDER BY Total_Profit DESC
 LIMIT 10;
+
 3. Customer Purchase Frequency
 Query to calculate the number of orders placed by each customer:
 
@@ -66,6 +68,7 @@ FROM customers c
 JOIN orders o ON c.Customer_ID = o.Customer_ID
 GROUP BY c.Customer_Name
 ORDER BY Order_Count DESC;
+
 4. Return Rate by Product Category
 Query to calculate the return rate for each product category:
 
@@ -76,6 +79,7 @@ FROM orders o
 LEFT JOIN returns r ON o.Order_ID = r.Order_ID AND r.Returned = 'Yes'
 GROUP BY o.Category
 ORDER BY Return_Rate DESC;
+
 5. Discount Impact on Profit
 Query to analyze the impact of discounts on profit:
 
